@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "Flixify Extractor",
+  "version": "2.0",
+  "author": "lukasNo1",
+
+  "background": {
+    "scripts": ["bg.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_start",
+      "js": ["main.js"]
+    }
+  ],
+
+  "browser_action": {
+    "default_title": "Flixify Extractor",
+    "default_icon": "icon.png"
+  },
+
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "web_accessible_resources": [
+    "*.png",
+    "*.js"
+  ]
+}
